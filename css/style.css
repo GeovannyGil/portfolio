@@ -8,6 +8,7 @@
   --colorTitulo: #E9EBEB;
   --colorSecundario: #FFA713;
   --colorPrincipal: #202020;
+  --colorFondoSecundario: #2D2D2D;
 }
 
 .animate__fadeInDown {
@@ -95,10 +96,6 @@ body {
 
 .home {
   display: flex;
-  /*background: url("../assets/banner.jpg") no-repeat center;
-  background-size: cover;
-  background-attachment: fixed;
-  */
   height: 100vh;
   color: var(--colorTitulo);
   min-height: 500px;
@@ -192,7 +189,7 @@ div.descripcion-content .text-descripcion {
 div.img-content {
   position: absolute;
   left: 25%;
-  bottom: 0;
+  bottom: -5px;
   z-index: -2;
 }
 
@@ -215,15 +212,152 @@ div.titulo-derecho {
   padding: 1em 10em 1em 10em;
 }
 
+div.fondoTexto {
+  /* position: absolute;
+  display: inline-block;
+  left: auto;
+  right: 0;
+  padding: 1em 10em 1em 10em;
+  color: var(--colorTitulo);
+  font-family: "Poppins";
+  font-weight: 900;
+  font-size: 275px;
+  z-index: 100;*/
+}
+
+
 div.titulo-derecho h2 {
+  color: var(--colorTitulo);
+  font-family: "Gilroy";
+  font-weight: 800;
+  font-size: 101px;
+}
+
+.sobre-mi {
+  display: flex;
+  height: 100vh;
+  background-color: var(--colorFondoSecundario);
+  min-height: 500px;
+}
+
+.sobre-mi .max-width {
+  margin: 200px auto 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+
+div.about-content div.text-saludo {
+  color: var(--colorTexto);
+  font-family: "Poppins";
+  font-weight: 500;
+  font-size: 26px;
+  margin-bottom: 18px;
+}
+
+div.about-content div.text-agradecimiento {
   color: var(--colorTitulo);
   font-family: "Poppins";
   font-weight: 600;
-  font-size: 77px;
+  font-size: 37px;
+  margin-bottom: 34px;
 }
 
-div.sobre-mi {
-  position: relative;
+div.about-content div.text-agradecimiento span {
+  color: var(--colorSecundario);
+}
+
+div.about-content div.text-intereses {
+  color: var(--colorTexto);
+  font-family: "Poppins";
+  font-weight: 500;
+  font-size: 26px;
+  margin-bottom: 51px;
+}
+
+div.about-content div.text-intereses span {
+  color: var(--colorTitulo);
+}
+
+div.about-content div.anios-experiencia {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+div.about-content div.anios-experiencia .n1 {
+  display: flex;
+  align-items: center;
+}
+
+div.about-content div.anios-experiencia span {
+  display: inline-block;
+  color: var(--colorSecundario);
+  font-family: "Poppins";
+  font-weight: 800;
+  font-size: 118px;
+}
+
+div.about-content div.anios-experiencia p {
+  display: inline-block;
+  color: var(--colorTitulo);
+  font-family: "Poppins";
+  font-weight: 500;
+  font-size: 29px;
+}
+
+div.about-content div.anios-experiencia input {
+  cursor: pointer;
+  background-color: var(--colorSecundario);
+  color: var(--colorTitulo);
+  font-family: "Poppins";
+  font-weight: 500;
+  font-size: 34px;
+  width: 260px;
+  height: 77px;
+  border-style: none;
+  right: 0;
+  transition: color 0.3s ease;
+}
+
+div.about-content div.anios-experiencia input:hover {
+  background-color: #FFB02B;
+  transition: color 0.3s ease;
+}
+
+div.about-content {
+  width: 600px;
+}
+
+div.pregunta-correo-content div.text-consulta {
+  color: var(--colorTitulo);
+  font-family: "Poppins";
+  font-weight: 600;
+  font-size: 37px;
+  text-align: right;
+  margin-bottom: 1em;
+}
+
+div.pregunta-correo-content div.text-escribeme {
+  color: var(--colorTexto);
+  font-family: "Poppins";
+  font-weight: 500;
+  font-size: 26px;
+  text-align: right;
+  margin-bottom: 4em;
+}
+
+div.pregunta-correo-content div.text-correo-personal {
+  font-family: "Poppins";
+  font-weight: 500;
+  font-size: 29px;
+  text-align: right;
+}
+
+div.pregunta-correo-content div.text-correo-personal a {
+  text-decoration: underline;
+  color: var(--colorSecundario);
 }
 
 /*Responsivo*/
