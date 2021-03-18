@@ -2,6 +2,7 @@ window.onscroll = function () {
   let y = window.scrollY;
   if (y > 20) {
     document.getElementById("navbar").classList.add('sticky');
+    document.querySelector('.titulo-about-me').classList.remove("desactivar");
   } else {
     document.getElementById("navbar").classList.remove('sticky');
   }

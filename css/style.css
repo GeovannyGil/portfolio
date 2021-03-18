@@ -54,7 +54,8 @@ body {
 
 .navbar.sticky {
   transition: all .3s ease;
-  background-color: var(--colorPrincipal);
+  background: rgb(32, 32, 32);
+  background: linear-gradient(180deg, rgba(32, 32, 32, 1) 0%, rgba(32, 32, 32, 0.75) 25%, rgba(32, 32, 32, 0.5) 50%, rgba(32, 32, 32, 0.25) 75%, rgba(32, 32, 32, 0) 100%);
 }
 
 .max-width {
@@ -197,29 +198,21 @@ div.descripcion-content .text-descripcion {
   font-size: 21px;
 }
 
-/*div.home-content {
+/*Estilo de acerca de mi*/
+div.titulo-about-me {
   position: absolute;
-}*/
-
-/*Estilo de la imagen principal de bienvenida*/
-
-div.img-content {
-  position: absolute;
-  left: 25%;
-  bottom: -5px;
-  z-index: -2;
+  background-color: var(--colorSecundario);
+  font: normal normal 800 101px "Gilroy";
+  color: var(--colorTitulo);
+  padding: 10px 94px;
+  right: 0;
+  margin-top: -75px;
+  /*
+  width: 802px;
+  height: 102px;
+  */
 }
 
-/*div.img-content {
-  z-index: -2;
-}*/
-
-/*div.img-content img {
-  width: 100%;
-  float: right;
-}*/
-
-/*Estilo de acerca de mi*/
 
 div.fondoTexto {
   position: absolute;
@@ -229,7 +222,7 @@ div.fondoTexto {
   color: var(--colorPrincipal);
   text-align: right;
   right: 0;
-  margin-top: 140px;
+  opacity: 37%;
   /*
   padding: 1em 10em 1em 10em;
   z-index: 100;*/
@@ -249,7 +242,10 @@ div.fondoTexto {
   justify-content: space-between;
 }
 
-
+div.about-content {
+  width: 600px;
+  z-index: 1;
+}
 
 div.about-content div.text-saludo {
   color: var(--colorTexto);
@@ -308,6 +304,7 @@ div.about-content div.anios-experiencia p {
   font-family: "Poppins";
   font-weight: 500;
   font-size: 29px;
+  margin-left: 10px;
 }
 
 div.about-content div.anios-experiencia input {
@@ -329,8 +326,9 @@ div.about-content div.anios-experiencia input:hover {
   transition: color 0.3s ease;
 }
 
-div.about-content {
-  width: 600px;
+
+div.pregunta-correo-content {
+  z-index: 1;
 }
 
 div.pregunta-correo-content div.text-consulta {
@@ -349,6 +347,15 @@ div.pregunta-correo-content div.text-escribeme {
   font-size: 26px;
   text-align: right;
   margin-bottom: 4em;
+}
+
+div.barrita {
+  width: 10px;
+  height: 141px;
+  background-color: var(--colorSecundario);
+  position: relative;
+  top: -66px;
+  left: 14px;
 }
 
 div.pregunta-correo-content div.text-correo-personal {
@@ -373,16 +380,44 @@ div.pregunta-correo-content div.text-correo-personal a {
   div.descripcion-content {
     margin-left: 5em;
   }
+
+  div.fondoTexto {
+    font-size: 225px;
+  }
 }
 
 @media (max-width: 991px) {
+  div.barrita {
+    display: none;
+  }
+
   .home .max-width {
+    margin-left: 0 50px;
+  }
+
+  .sobre-mi .max-width {
     margin-left: 0 50px;
   }
 
   div.home-content .redes a {
     font-size: 1.5em;
   }
+
+  div.about-content div.text-saludo {
+    padding-top: 35px;
+  }
+
+  div.about-content div.text-intereses {
+    margin-bottom: 20px;
+  }
+
+  div.titulo-about-me {
+    position: absolute;
+    font-size: 80px;
+    padding: 10px 70px;
+  }
+
+
 }
 
 
@@ -471,6 +506,18 @@ div.pregunta-correo-content div.text-correo-personal a {
     margin-bottom: 2em;
   }
 
+  div.about-content {
+    z-index: 3;
+  }
+
+  div.fondoTexto {
+    display: none;
+  }
+
+  div.titulo-about-me {
+    font-size: 70px;
+    padding: 5px 70px;
+  }
 
 }
 
@@ -498,6 +545,7 @@ div.pregunta-correo-content div.text-correo-personal a {
   }
 
   div.about-content div.text-saludo {
+    padding-top: 35px;
     font-size: 17px;
   }
 
@@ -510,8 +558,8 @@ div.pregunta-correo-content div.text-correo-personal a {
   }
 
   div.about-content div.anios-experiencia {
-    margin-top: -25px;
-    margin-bottom: 75px;
+    margin-top: -5px;
+    margin-bottom: 55px;
     display: block;
     text-align: center;
   }
@@ -540,6 +588,14 @@ div.pregunta-correo-content div.text-correo-personal a {
     margin-top: -35px;
     font-size: 21px;
   }
+
+  div.titulo-about-me {
+    position: absolute;
+    font-size: 30px;
+    padding: 5px 50px;
+    margin-top: -25px;
+  }
+
 }
 
 @media (max-width: 500px) {
