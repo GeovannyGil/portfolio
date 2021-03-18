@@ -100,10 +100,14 @@ body {
 /*Estilo de la seccion de bienvenida*/
 
 .home {
+  background: url("../assets/yo-simulado2.png") no-repeat left;
+  background-size: contain;
+  background-position-x: 23em;
   display: flex;
   height: 100vh;
   color: var(--colorTitulo);
   min-height: 500px;
+  transition: all .4s ease-in-out;
 }
 
 .home .max-width {
@@ -234,7 +238,7 @@ div.fondoTexto {
 .sobre-mi {
   display: flex;
   height: 100vh;
-  /*background-color: var(--colorFondoSecundario);*/
+  background-color: var(--colorFondoSecundario);
   min-height: 500px;
 }
 
@@ -361,6 +365,10 @@ div.pregunta-correo-content div.text-correo-personal a {
 
 /*Responsivo*/
 @media (max-width: 1104px) {
+  .home {
+    background-position-x: 11em;
+    transition: all .4s ease-in-out;
+  }
 
   div.descripcion-content {
     margin-left: 5em;
@@ -382,6 +390,7 @@ div.pregunta-correo-content div.text-correo-personal a {
   html {
     width: 100% !important;
   }
+
 
   .max-width {
     padding: 0 50px;
@@ -466,6 +475,12 @@ div.pregunta-correo-content div.text-correo-personal a {
 }
 
 @media (max-width: 690px) {
+  .home {
+    background-size: cover;
+    background-position-x: 3em;
+    transition: all .4s ease-in-out;
+  }
+
   .max-width {
     padding: 0 23px;
   }
