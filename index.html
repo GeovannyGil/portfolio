@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, user-scalable=no" />
   <link rel="preconnect" href="https://fonts.gstatic.com">
   <link
     href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
@@ -27,7 +27,7 @@
       <div class="logo">
         <a href="#"><img src="assets/logo.svg" alt=""></a>
       </div>
-      <ul class="menu">
+      <ul class="menu" id="menu-bar">
         <li><a href="#">Inicio</a></li>
         <li><a href="#">Conoceme</a></li>
         <li><a href="#">Experiencia</a></li>
@@ -40,9 +40,9 @@
   </nav>
   <!-- Este es mi seccion de presentación-->
   <section class="home" id="home">
-    <div class="img-content">
+    <!-- <div class="img-content">
       <img src="assets/yo.svg" alt="">
-    </div>
+    </div>-->
     <div class="max-width">
       <div class="home-content">
         <div class="text-soy">
@@ -57,9 +57,9 @@
           Soy <span>Desarrollador Back-end</span>
         </div>
         <div class="redes">
-          <i class="fab fa-github"></i>
-          <i class="fab fa-linkedin"></i>
-          <i class="fab fa-instagram"></i>
+          <a href=""><i class="fab fa-github"></i></a>
+          <a href=""><i class="fab fa-linkedin"></i></a>
+          <a href=""><i class="fab fa-instagram"></i></a>
         </div>
       </div>
       <div class="descripcion-content">
@@ -76,13 +76,15 @@
       </div>
     </div>
   </section>
+  <!--
   <div class="titulo-derecho">
     <h2>Acerca de mi</h2>
-  </div>
-  <div class="fondoTexto">
-    Acerca de mí
-  </div>
+  </div>-->
+
   <section class="sobre-mi" id="about">
+    <!-- <div class="fondoTexto">
+      Acerca <br> de mí
+    </div>-->
     <div class="max-width">
       <div class="about-content">
         <div class="text-saludo">

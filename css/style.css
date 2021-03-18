@@ -17,6 +17,7 @@
 
 html {
   box-sizing: border-box;
+  width: 100%;
 }
 
 *,
@@ -34,6 +35,10 @@ html {
 
 body {
   background-color: var(--colorPrincipal);
+}
+
+.desactivar {
+  display: none;
 }
 
 /*Estilo del navbar*/
@@ -144,13 +149,19 @@ div.home-content .redes {
   margin-top: 3em;
 }
 
-div.home-content .redes i {
+div.home-content .redes a {
   color: var(--colorTitulo);
   font-size: 2em;
   margin-left: 1em;
+  transition: color .3s ease;
 }
 
-div.home-content .redes i:first-child {
+div.home-content .redes :hover {
+  color: var(--colorSecundario);
+  transition: color .3s ease;
+}
+
+div.home-content .redes a:first-child {
   margin-left: 0;
 }
 
@@ -167,6 +178,7 @@ div.descripcion-content .text-soy {
 }
 
 div.descripcion-content .text-profesion {
+  margin-top: 25px;
   color: var(--colorTitulo);
   font-family: "Poppins";
   font-weight: 600;
@@ -174,6 +186,7 @@ div.descripcion-content .text-profesion {
 }
 
 div.descripcion-content .text-descripcion {
+  margin-top: 25px;
   color: var(--colorTexto);
   font-family: "Poppins";
   font-weight: 600;
@@ -203,49 +216,35 @@ div.img-content {
 }*/
 
 /*Estilo de acerca de mi*/
-div.titulo-derecho {
-  position: absolute;
-  background-color: var(--colorSecundario);
-  display: inline-block;
-  left: auto;
-  right: 0;
-  padding: 1em 10em 1em 10em;
-}
 
 div.fondoTexto {
-  /* position: absolute;
-  display: inline-block;
-  left: auto;
-  right: 0;
-  padding: 1em 10em 1em 10em;
-  color: var(--colorTitulo);
+  position: absolute;
   font-family: "Poppins";
   font-weight: 900;
   font-size: 275px;
+  color: var(--colorPrincipal);
+  text-align: right;
+  right: 0;
+  margin-top: 140px;
+  /*
+  padding: 1em 10em 1em 10em;
   z-index: 100;*/
-}
-
-
-div.titulo-derecho h2 {
-  color: var(--colorTitulo);
-  font-family: "Gilroy";
-  font-weight: 800;
-  font-size: 101px;
 }
 
 .sobre-mi {
   display: flex;
   height: 100vh;
-  background-color: var(--colorFondoSecundario);
+  /*background-color: var(--colorFondoSecundario);*/
   min-height: 500px;
 }
 
 .sobre-mi .max-width {
-  margin: 200px auto 0 auto;
+  margin: 0 auto 0 auto;
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
+
 
 
 div.about-content div.text-saludo {
@@ -362,9 +361,6 @@ div.pregunta-correo-content div.text-correo-personal a {
 
 /*Responsivo*/
 @media (max-width: 1104px) {
-  .home .max-width {
-    margin-left: 0px;
-  }
 
   div.descripcion-content {
     margin-left: 5em;
@@ -376,13 +372,16 @@ div.pregunta-correo-content div.text-correo-personal a {
     margin-left: 0 50px;
   }
 
-  div.home-content .redes i {
+  div.home-content .redes a {
     font-size: 1.5em;
   }
 }
 
 
 @media (max-width: 947px) {
+  html {
+    width: 100% !important;
+  }
 
   .max-width {
     padding: 0 50px;
@@ -441,6 +440,29 @@ div.pregunta-correo-content div.text-correo-personal a {
     display: none;
   }
 
+  .sobre-mi {
+    display: block;
+  }
+
+  div.about-content {
+    width: auto;
+  }
+
+  .sobre-mi .max-width {
+    margin: 0 auto;
+    display: block;
+  }
+
+  div.pregunta-correo-content div.text-consulta {
+    margin-top: -5px;
+  }
+
+  div.pregunta-correo-content div.text-escribeme {
+    margin-top: -10px;
+    margin-bottom: 2em;
+  }
+
+
 }
 
 @media (max-width: 690px) {
@@ -448,16 +470,60 @@ div.pregunta-correo-content div.text-correo-personal a {
     padding: 0 23px;
   }
 
-  div.home-content .text-soy {
-    font-size: 30px;
+  div.home-content div.text-soy {
+    font-size: 21px;
   }
 
-  div.home-content .text-nombre {
-    font-size: 60px;
+  div.home-content div.text-nombre {
+    font-size: 50px;
   }
 
-  div.home-content .text-profesion {
-    font-size: 32px;
+  div.home-content div.text-profesion {
+    font-size: 24px;
+  }
+
+  div.about-content div.text-saludo {
+    font-size: 17px;
+  }
+
+  div.about-content div.text-agradecimiento {
+    font-size: 21px;
+  }
+
+  div.about-content div.text-intereses {
+    font-size: 17px;
+  }
+
+  div.about-content div.anios-experiencia {
+    margin-top: -25px;
+    margin-bottom: 75px;
+    display: block;
+    text-align: center;
+  }
+
+  div.about-content div.anios-experiencia div.n1 {
+    margin-left: auto;
+    margin-right: auto;
+    display: table;
+  }
+
+  div.about-content div.anios-experiencia div.n1 {
+    margin-left: auto;
+    margin-right: auto;
+    display: table;
+  }
+
+  div.pregunta-correo-content div.text-consulta {
+    font-size: 25px;
+  }
+
+  div.pregunta-correo-content div.text-escribeme {
+    font-size: 17px;
+  }
+
+  div.pregunta-correo-content div.text-correo-personal {
+    margin-top: -35px;
+    font-size: 21px;
   }
 }
 
