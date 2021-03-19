@@ -370,6 +370,22 @@ div.pregunta-correo-content div.text-correo-personal a {
   color: var(--colorSecundario);
 }
 
+/*Estilo de sección de experiencia*/
+div.titulo-experiencia {
+  position: absolute;
+  background-color: var(--colorSecundario);
+  font: normal normal 800 101px "Gilroy";
+  color: var(--colorTitulo);
+  padding: 10px 125px;
+  left: 0;
+  margin-top: -75px;
+  /*
+  width: 802px;
+  height: 102px;
+  */
+}
+
+
 /*Responsivo*/
 @media (max-width: 1104px) {
   .home {
