@@ -385,6 +385,56 @@ div.titulo-experiencia {
   */
 }
 
+.experiencia {
+  display: flex;
+  height: 100vh;
+  min-height: 500px;
+  align-items: center;
+}
+
+.experiencia .max-width {
+  margin: 0 auto 0 auto;
+
+}
+
+
+.experiencia div.skillets {
+  font: normal normal 600 37px "Poppins";
+  color: var(--colorTitulo);
+  text-align: right;
+  margin-bottom: 70px;
+}
+
+.experiencia div.skillets span {
+  color: var(--colorSecundario);
+}
+
+
+.wrapper {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 10px;
+}
+
+div.experiencia-content div.tecnologias-iconos p {
+  font: normal normal 500 32px "Poppins";
+  color: var(--colorTexto);
+  margin-bottom: 18px;
+}
+
+div.experiencia-content div.tecnologias-iconos p span {
+  color: var(--colorSecundario);
+}
+
+div.experiencia-content div.tecnologias-iconos img {
+  margin-right: 23px;
+}
+
+div.experiencia-content div.tecnologias-iconos img:last-child {
+  margin-right: 0;
+}
+
+
 
 /*Responsivo*/
 @media (max-width: 1104px) {
@@ -428,12 +478,14 @@ div.titulo-experiencia {
   }
 
   div.titulo-about-me {
-    position: absolute;
     font-size: 80px;
     padding: 10px 70px;
   }
 
-
+  div.titulo-experiencia {
+    font-size: 60px;
+    padding: 10px 70px;
+  }
 }
 
 
@@ -535,6 +587,13 @@ div.titulo-experiencia {
     padding: 5px 70px;
   }
 
+
+  div.titulo-experiencia {
+    margin-top: -50px;
+    font-size: 80px;
+    padding: 5px 70px;
+  }
+
 }
 
 @media (max-width: 690px) {
@@ -575,7 +634,7 @@ div.titulo-experiencia {
 
   div.about-content div.anios-experiencia {
     margin-top: -5px;
-    margin-bottom: 55px;
+    margin-bottom: 35px;
     display: block;
     text-align: center;
   }
@@ -605,12 +664,13 @@ div.titulo-experiencia {
     font-size: 21px;
   }
 
-  div.titulo-about-me {
-    position: absolute;
+  div.titulo-about-me,
+  div.titulo-experiencia {
     font-size: 30px;
     padding: 5px 50px;
     margin-top: -25px;
   }
+
 
 }
 
