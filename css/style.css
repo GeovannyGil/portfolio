@@ -102,9 +102,8 @@ body {
 /*Estilo de la seccion de bienvenida*/
 
 .home {
-  background: url('../assets/yo-simulado2.png') no-repeat left;
+  background: url('../assets/mifoto.png') no-repeat left;
   background-size: contain;
-  background-position-x: 23em;
   display: flex;
   height: 100vh;
   color: var(--colorTitulo);
@@ -723,13 +722,17 @@ div.footer-formulario input[type=button]:hover {
 
 /*Responsivo*/
 @media (max-width: 1104px) {
+  .navbar .menu li a {
+    font-size: 17px;
+    margin-left: 1.5em;
+  }
+
   .home {
-    background-position-x: 11em;
     transition: all .4s ease-in-out;
   }
 
   div.descripcion-content {
-    margin-left: 5em;
+    margin-left: 3em;
   }
 
   div.fondoTexto {
@@ -1151,7 +1154,6 @@ div.footer-formulario input[type=button]:hover {
 @media (max-width: 690px) {
   .home {
     background-size: cover;
-    background-position-x: 3em;
     transition: all .4s ease-in-out;
   }
 
@@ -1161,6 +1163,7 @@ div.footer-formulario input[type=button]:hover {
 
   div.home-content div.text-soy {
     font-size: 21px;
+    font-weight: 600;
   }
 
   div.home-content div.text-nombre {
