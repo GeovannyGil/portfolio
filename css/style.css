@@ -413,7 +413,7 @@ div.titulo-experiencia {
 .wrapper {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  grid-gap: 10px;
+  grid-gap: 70px;
 }
 
 div.experiencia-content div.tecnologias-iconos p {
@@ -426,15 +426,30 @@ div.experiencia-content div.tecnologias-iconos p span {
   color: var(--colorSecundario);
 }
 
-div.experiencia-content div.tecnologias-iconos img {
+
+
+div.experiencia-content div.tecnologias-iconos div.iconos {
+  display: flex;
+  align-items: center;
+}
+
+div.experiencia-content div.tecnologias-iconos div.iconos img {
   margin-right: 23px;
 }
 
-div.experiencia-content div.tecnologias-iconos img:last-child {
+div.experiencia-content div.tecnologias-iconos div.iconos img:last-child {
   margin-right: 0;
 }
 
+@media (max-width: 1224px) {
+  div.experiencia-content div.tecnologias-iconos div.iconos img {
+    height: 50px;
+  }
 
+  div.experiencia-content div.tecnologias-iconos div.iconos img.other {
+    width: 50px;
+  }
+}
 
 /*Responsivo*/
 @media (max-width: 1104px) {
@@ -449,6 +464,23 @@ div.experiencia-content div.tecnologias-iconos img:last-child {
 
   div.fondoTexto {
     font-size: 225px;
+  }
+
+  div.about-content {
+    width: auto;
+  }
+
+  div.about-content div.anios-experiencia input {
+    font-size: 27px;
+    height: 65px;
+  }
+
+  div.pregunta-correo-content div.text-consulta {
+    margin-bottom: 0.5em;
+  }
+
+  div.pregunta-correo-content div.text-escribeme {
+    margin-bottom: 0.5em;
   }
 }
 
@@ -474,7 +506,7 @@ div.experiencia-content div.tecnologias-iconos img:last-child {
   }
 
   div.about-content div.text-intereses {
-    margin-bottom: 20px;
+    margin-bottom: 10px;
   }
 
   div.titulo-about-me {
@@ -483,8 +515,29 @@ div.experiencia-content div.tecnologias-iconos img:last-child {
   }
 
   div.titulo-experiencia {
-    font-size: 60px;
+    font-size: 80px;
     padding: 10px 70px;
+  }
+
+  .experiencia div.skillets {
+    font-size: 27px;
+  }
+
+  div.experiencia-content div.tecnologias-iconos p {
+    font-size: 27px;
+  }
+
+  .wrapper {
+    grid-gap: 50px;
+  }
+
+  div.experiencia-content div.tecnologias-iconos div.iconos img {
+    height: 35px;
+  }
+
+
+  div.experiencia-content div.tecnologias-iconos div.iconos img.other {
+    width: 30px;
   }
 }
 
@@ -590,10 +643,54 @@ div.experiencia-content div.tecnologias-iconos img:last-child {
 
   div.titulo-experiencia {
     margin-top: -50px;
-    font-size: 80px;
+    font-size: 70px;
     padding: 5px 70px;
   }
 
+}
+
+@media (max-width: 824px) {
+  div.pregunta-correo-content div.text-consulta {
+    margin-bottom: 0.5em;
+  }
+
+  div.pregunta-correo-content div.text-escribeme {
+    margin-bottom: 0px;
+  }
+
+}
+
+@media (max-width: 720px) {
+  .experiencia div.skillets {
+    margin-bottom: 45px;
+  }
+
+  .experiencia div.skillets,
+  div.experiencia-content div.tecnologias-iconos {
+    text-align: center;
+  }
+
+  div.experiencia-content div.tecnologias-iconos div.iconos {
+    justify-content: center;
+  }
+
+  .wrapper {
+    grid-template-columns: repeat(1, 1fr);
+    grid-gap: 25px;
+  }
+
+  div.experiencia-content div.tecnologias-iconos div.iconos img {
+    height: 30px;
+    margin-right: 15px;
+  }
+
+  div.experiencia-content div.tecnologias-iconos div.iconos img:last-child {
+    margin-right: 0;
+  }
+
+  div.experiencia-content div.tecnologias-iconos div.iconos img.other {
+    width: 30px;
+  }
 }
 
 @media (max-width: 690px) {
@@ -653,14 +750,15 @@ div.experiencia-content div.tecnologias-iconos img:last-child {
 
   div.pregunta-correo-content div.text-consulta {
     font-size: 25px;
+    margin-bottom: 1em;
   }
 
   div.pregunta-correo-content div.text-escribeme {
     font-size: 17px;
+    margin-bottom: 2em;
   }
 
   div.pregunta-correo-content div.text-correo-personal {
-    margin-top: -35px;
     font-size: 21px;
   }
 
@@ -670,8 +768,6 @@ div.experiencia-content div.tecnologias-iconos img:last-child {
     padding: 5px 50px;
     margin-top: -25px;
   }
-
-
 }
 
 @media (max-width: 500px) {
