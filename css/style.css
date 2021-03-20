@@ -402,7 +402,7 @@ div.titulo-experiencia {
   font: normal normal 600 37px "Poppins";
   color: var(--colorTitulo);
   text-align: right;
-  margin-bottom: 70px;
+  margin-bottom: 50px;
 }
 
 .experiencia div.skillets span {
@@ -439,6 +439,17 @@ div.experiencia-content div.tecnologias-iconos div.iconos img {
 
 div.experiencia-content div.tecnologias-iconos div.iconos img:last-child {
   margin-right: 0;
+}
+
+/*Estilo de la sección de clientes*/
+div.titulo-cliente {
+  position: absolute;
+  background-color: var(--colorSecundario);
+  font: normal normal 800 101px "Gilroy";
+  color: var(--colorTitulo);
+  padding: 5px 175px;
+  right: 0;
+  margin-top: -75px;
 }
 
 @media (max-width: 1224px) {
@@ -509,14 +520,15 @@ div.experiencia-content div.tecnologias-iconos div.iconos img:last-child {
     margin-bottom: 10px;
   }
 
-  div.titulo-about-me {
+  div.titulo-about-me,
+  div.titulo-experiencia {
     font-size: 80px;
     padding: 10px 70px;
   }
 
-  div.titulo-experiencia {
+  div.titulo-cliente {
     font-size: 80px;
-    padding: 10px 70px;
+    padding: 10px 125px;
   }
 
   .experiencia div.skillets {
@@ -539,6 +551,8 @@ div.experiencia-content div.tecnologias-iconos div.iconos img:last-child {
   div.experiencia-content div.tecnologias-iconos div.iconos img.other {
     width: 30px;
   }
+
+
 }
 
 
@@ -647,6 +661,12 @@ div.experiencia-content div.tecnologias-iconos div.iconos img:last-child {
     padding: 5px 70px;
   }
 
+
+  div.titulo-cliente {
+    margin-top: -50px;
+    font-size: 70px;
+    padding: 5px 105px;
+  }
 }
 
 @media (max-width: 824px) {
@@ -766,6 +786,13 @@ div.experiencia-content div.tecnologias-iconos div.iconos img:last-child {
   div.titulo-experiencia {
     font-size: 30px;
     padding: 5px 50px;
+    margin-top: -25px;
+  }
+
+  div.titulo-cliente {
+
+    font-size: 30px;
+    padding: 5px 55px;
     margin-top: -25px;
   }
 }
