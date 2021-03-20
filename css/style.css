@@ -18,6 +18,7 @@
 html {
   box-sizing: border-box;
   width: 100%;
+  scroll-behavior: smooth;
 }
 
 *,
@@ -452,6 +453,66 @@ div.titulo-cliente {
   margin-top: -75px;
 }
 
+.clientes {
+  display: flex;
+  height: 100vh;
+  background-color: var(--colorFondoSecundario);
+  min-height: 500px;
+  align-items: center;
+}
+
+.clientes .max-width {
+  margin: 0 auto 0 auto;
+  text-align: center;
+}
+
+.clientes div.carrusel {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  align-items: center;
+}
+
+.clientes div.box-clientes {
+  margin: auto auto;
+  width: 253px;
+  height: 253px;
+  box-shadow: 0px 0px 26px #00000029;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all .3s ease;
+}
+
+.clientes div.box-clientes.platzi-bussines:hover {
+  background-color: #97C93E;
+  transition: all .3s ease;
+}
+
+.clientes div.box-clientes.watsy-bussines:hover {
+  background-color: #FF6F00;
+  transition: all .3s ease;
+}
+
+.clientes div.box-clientes.google-bussines:hover {
+  background-color: #4285F4;
+  transition: all .3s ease;
+}
+
+.clientes div.box-clientes.select {
+  width: 388px;
+  height: 388px;
+  box-shadow: 0px 0px 26px #00000029;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.clientes div.carrusel-puntos {
+  margin-top: 50px;
+  display: inline-block;
+}
+
+
 @media (max-width: 1224px) {
   div.experiencia-content div.tecnologias-iconos div.iconos img {
     height: 50px;
@@ -493,6 +554,25 @@ div.titulo-cliente {
   div.pregunta-correo-content div.text-escribeme {
     margin-bottom: 0.5em;
   }
+
+  .clientes div.box-clientes {
+    width: 200px;
+    height: 200px;
+  }
+
+  .clientes div.box-clientes.select {
+    width: 350px;
+    height: 350px;
+  }
+
+  .clientes div.box-clientes img {
+    width: 75%;
+  }
+
+  .clientes div.carrusel-puntos img {
+    width: 75px;
+  }
+
 }
 
 @media (max-width: 991px) {
@@ -667,6 +747,22 @@ div.titulo-cliente {
     font-size: 70px;
     padding: 5px 105px;
   }
+
+  .clientes div.box-clientes {
+    width: 200px;
+    height: 200px;
+  }
+
+  .clientes div.box-clientes.select {
+    width: 300px;
+    height: 300px;
+  }
+
+  .clientes div.box-clientes img {
+    width: 65%;
+  }
+
+
 }
 
 @media (max-width: 824px) {
@@ -676,6 +772,27 @@ div.titulo-cliente {
 
   div.pregunta-correo-content div.text-escribeme {
     margin-bottom: 0px;
+  }
+
+  .clientes div.carrusel div.box-clientes {
+    display: none;
+  }
+
+  .clientes div.carrusel {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    align-items: center;
+  }
+
+  .clientes div.carrusel div.box-clientes.select {
+    display: flex;
+    width: 300;
+    height: 300;
+  }
+
+
+  .clientes div.carrusel-puntos img {
+    width: initial;
   }
 
 }
