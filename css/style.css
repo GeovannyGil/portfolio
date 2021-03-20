@@ -512,7 +512,7 @@ div.titulo-cliente {
   display: inline-block;
 }
 
-/*Estilo de la sección de clientes*/
+/*Estilo de la sección de portafolio*/
 
 .portafolio {
   display: flex;
@@ -543,6 +543,133 @@ div.titulo-cliente {
   display: inline-block;
 }
 
+/*Estilo del footer*/
+
+
+div.logo-footer {
+  position: absolute;
+  right: 0;
+  left: 0;
+  text-align: center;
+  margin-top: -50px;
+}
+
+div.logo-footer img {
+  width: 126px;
+  height: 126px;
+}
+
+footer {
+  display: flex;
+  height: 100vh;
+  background-color: var(--colorFondoSecundario);
+  min-height: 500px;
+  align-items: center;
+}
+
+footer .max-width {
+  margin: 0 auto 0 auto;
+}
+
+div.content {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 70px;
+}
+
+div.formas-contacto div.form-content {
+  display: flex;
+  align-items: center;
+  margin-bottom: 61px;
+}
+
+div.formas-contacto h2,
+div.footer-formulario h2 {
+  color: var(--colorTitulo);
+  font-size: 47px;
+  font-weight: 600;
+  font-family: 'Poppins';
+  margin-top: 50px;
+  margin-bottom: 80px;
+}
+
+div.formas-contacto h2 span,
+div.footer-formulario h2 span {
+  color: var(--colorSecundario);
+}
+
+div.formas-contacto div.form-content i {
+  color: var(--colorSecundario);
+  font-size: 52px;
+  margin-right: 15px;
+}
+
+div.formas-contacto div.form-content p {
+  color: var(--colorTexto);
+  font-size: 18px;
+  font-weight: 600;
+  font-family: 'Poppins';
+}
+
+div.formas-contacto div.form-content h4 {
+  color: var(--colorTitulo);
+  font-size: 35px;
+  font-weight: 600;
+  font-family: 'Poppins';
+}
+
+div.footer-formulario {
+  margin-left: 75px;
+}
+
+div.footer-formulario input[type=email],
+div.footer-formulario textarea,
+div.footer-formulario input[type=text],
+div.footer-formulario input[type=button] {
+  font-size: 18px;
+  font-weight: 600;
+  font-family: 'Poppins';
+  border: none;
+  color: var(--colorTitulo);
+}
+
+::placeholder {
+  color: var(--colorTitulo);
+}
+
+div.footer-formulario input[type=email],
+div.footer-formulario textarea,
+div.footer-formulario input[type=text] {
+  background-color: var(--colorPrincipal);
+}
+
+div.footer-formulario input[type=email],
+div.footer-formulario input[type=text] {
+  width: 100%;
+  padding: 25px;
+  margin-top: 15px;
+}
+
+div.footer-formulario textarea {
+  width: 100%;
+  padding: 25px;
+  margin-top: 15px;
+}
+
+div.footer-formulario input[type=button] {
+  cursor: pointer;
+  background-color: var(--colorSecundario);
+  padding: 15px 50px;
+  border-style: none;
+  transition: color 0.3s ease;
+  margin-top: 15px;
+}
+
+div.footer-formulario input[type=button]:hover {
+  background-color: #FFB02B;
+  transition: color 0.3s ease;
+}
+
 @media (max-width: 1224px) {
   div.experiencia-content div.tecnologias-iconos div.iconos img {
     height: 50px;
@@ -551,6 +678,47 @@ div.titulo-cliente {
   div.experiencia-content div.tecnologias-iconos div.iconos img.other {
     width: 50px;
   }
+
+  div.content {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 70px;
+  }
+
+  div.formas-contacto div.form-content {
+    margin-bottom: 45px;
+  }
+
+  div.formas-contacto h2,
+  div.footer-formulario h2 {
+    font-size: 47px;
+    margin-top: 80px;
+    margin-bottom: 50px;
+  }
+
+  div.formas-contacto div.form-content i {
+    font-size: 52px;
+    margin-right: 15px;
+  }
+
+  div.formas-contacto div.form-content p {
+    font-size: 18px;
+  }
+
+  div.formas-contacto div.form-content h4 {
+    font-size: 35px;
+  }
+
+  div.footer-formulario {
+    margin-left: 25px;
+  }
+
+  div.footer-formulario textarea,
+  div.footer-formulario input[type=email],
+  div.footer-formulario input[type=text] {
+    width: 100%;
+  }
+
 }
 
 /*Responsivo*/
@@ -607,10 +775,33 @@ div.titulo-cliente {
     width: 95%;
   }
 
+  div.content {
+    grid-gap: 20px;
+  }
 
+  div.formas-contacto h2,
+  div.footer-formulario h2 {
+    font-size: 35px;
+    margin-top: 120px;
+    margin-bottom: 40px;
+  }
 
+  div.formas-contacto div.form-content i {
+    font-size: 40px;
+    margin-right: 15px;
+  }
+
+  div.formas-contacto div.form-content p {
+    font-size: 15px;
+  }
+
+  div.formas-contacto div.form-content h4 {
+    font-size: 27px;
+  }
 
 }
+
+
 
 @media (max-width: 991px) {
   div.barrita {
@@ -831,12 +1022,41 @@ div.titulo-cliente {
     width: initial;
   }
 
+
   .portafolio div.box-portafolio:nth-child(odd) {
     display: none;
   }
 
   .portafolio div.box-portafolio img {
     width: 100%;
+  }
+
+  .portafolio div.carrusel-puntos {
+    margin-top: 25px;
+  }
+
+  div.content {
+    grid-gap: 10px;
+  }
+
+  div.formas-contacto h2,
+  div.footer-formulario h2 {
+    font-size: 24px;
+    margin-top: 120px;
+    margin-bottom: 40px;
+  }
+
+  div.formas-contacto div.form-content i {
+    font-size: 35px;
+    margin-right: 15px;
+  }
+
+  div.formas-contacto div.form-content p {
+    font-size: 12px;
+  }
+
+  div.formas-contacto div.form-content h4 {
+    font-size: 21px;
   }
 
 }
@@ -872,6 +1092,60 @@ div.titulo-cliente {
   div.experiencia-content div.tecnologias-iconos div.iconos img.other {
     width: 30px;
   }
+
+  div.content {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  div.formas-contacto h2,
+  div.footer-formulario h2 {
+    font-size: 24px;
+    margin-top: 15px;
+    margin-bottom: 10px;
+    text-align: center;
+  }
+
+  div.formas-contacto div.form-content {
+    margin-bottom: 15px;
+  }
+
+  div.formas-contacto div.form-content i {
+    font-size: 25px;
+  }
+
+  div.formas-contacto div.form-content p {
+    font-size: 9px;
+  }
+
+  div.formas-contacto div.form-content h4 {
+    font-size: 17px;
+  }
+
+  div.footer-formulario input[type=email],
+  div.footer-formulario textarea,
+  div.footer-formulario input[type=text],
+  div.footer-formulario input[type=button] {
+    margin-top: 5px;
+    font-size: 12px;
+  }
+
+  div.footer-formulario {
+    margin-left: 0;
+  }
+
+  div.footer-formulario input[type=email],
+  div.footer-formulario input[type=text],
+  div.footer-formulario textarea {
+    padding: 15px;
+  }
+
+  div.logo-footer img {
+    width: 75px;
+    height: 75px;
+  }
+
+
 }
 
 @media (max-width: 690px) {
